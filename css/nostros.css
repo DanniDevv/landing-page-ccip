@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Futura';
+    src: local('Futura Bold'), local('Futura-Bold'),
+        url('FuturaLT-Bold.woff2') format('woff2'),
+        url('FuturaLT-Bold.woff') format('woff'),
+        url('FuturaLT-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body {
+    background-image: url(../img/FONDO.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    height: 100vh;
+    /* Asegura que la página ocupe todo el alto del viewport */
+    margin: 0;
+    /* Elimina el margen por defecto del body */
+    flex-direction: column;
+    /* Alinea los elementos en columna (verticalmente) */
+}
+
+
+/* Para el título "Nosotros" */
+.titulo {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    margin-bottom: 20px;
+    /* Agrega espacio entre el título y los círculos */
+}
+
+.titulo h1 {
+    color: white;
+    margin-right: 20px;
+    /* Espacio entre el título y el icono */
+}
+
+.titulo img {
+    height: 4em;
+    order: 1;
+    /* Establece el tamaño de la imagen al tamaño de la fuente (la palabra "Nosotros") */
+}
+
+/* Para el círculo "MISION" */
+.circle-content h1 {
+    color: rgb(1, 1, 109);
+}
+
+/* Para el mensaje del círculo "MISION" */
+.circle-message p {
+    color: rgb(1, 1, 109);
+}
+
+/* Variables */
+:root {
+    --transition-duration: 0.3s;
+}
+
+/* Estilos para el contenedor de círculos */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite que los círculos se coloquen en una línea */
+    max-width: 800px;
+    /* Establece un ancho máximo para evitar que los círculos se extiendan demasiado */
+}
+
+/* Estilos para el círculo */
+.circle {
+    width: 300px;
+    /* Ajustar el tamaño del círculo */
+    height: 300px;
+    /* Ajustar el tamaño del círculo */
+    border-radius: 50%;
+    background-color: white;
+    /* Color rojo para el círculo */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* Color blanco para el texto */
+    font-size: 20px;
+    /* Tamaño del texto */
+    font-weight: bold;
+    /* Texto en negrita */
+    position: relative;
+    /* Añadir posición relativa para posicionar el contenido absoluto */
+    overflow: hidden;
+    /* Ocultar el contenido que esté fuera del círculo */
+    margin: 50px;
+    /* Agregar margen entre los círculos */
+}
+
+/* Estilos para el contenido dentro del círculo */
+.circle-content {
+    position: absolute;
+    /* Posición absoluta para mover el contenido */
+    top: 50%;
+    /* Centrar verticalmente */
+    left: 50%;
+    /* Centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centrar en el centro del círculo */
+    opacity: 1;
+    /* Mostrar el contenido inicialmente */
+    transition: top var(--transition-duration) ease-in-out, opacity var(--transition-duration) ease-in-out;
+    /* Agregar transición para un movimiento suave */
+}
+
+/* Estilos cuando el cursor pasa por encima del círculo */
+.circle:hover .circle-content {
+    top: 10%;
+    /* Mover el contenido hacia arriba (fuera del círculo) al pasar el cursor */
+    opacity: 0;
+    /* Ocultar el contenido cuando se pasa el cursor por encima */
+}
+
+/* Estilos para el mensaje "Hola Mundo" */
+.circle-message {
+    position: absolute;
+    /* Posición absoluta para mover el mensaje */
+    top: 50%;
+    /* Centrar verticalmente */
+    left: 50%;
+    /* Centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centrar en el centro del círculo */
+    opacity: 0;
+    /* Ocultar el mensaje inicialmente */
+    font-size: 24px;
+    /* Tamaño del mensaje */
+    font-weight: bold;
+    /* Mensaje en negrita */
+    color: #fff;
+    /* Color blanco para el mensaje */
+    z-index: 1;
+    /* Asegurar que el mensaje aparezca sobre el contenido del círculo */
+    transition: opacity var(--transition-duration) ease-in-out;
+    /* Agregar una transición para mostrar el mensaje de forma animada */
+    width: 80%;
+    /* Ajustar el ancho del mensaje */
+    text-align: center;
+    /* Centrar el texto */
+}
+
+/* Estilos cuando el cursor pasa por encima del círculo */
+.circle:hover .circle-message {
+    opacity: 1;
+    /* Mostrar el mensaje cuando se pasa el cursor por encima */
+}
+
+
+  /* Estilos para el botón de regreso */
+  .back-button-container {
+    position: fixed;
+    bottom: -100px; /* Ajusta esta propiedad para cambiar la distancia desde abajo */
+    right: 0;
+    padding: 10px;
+    z-index: 999;
+    border-radius: 50%;
+}
+
+.back-button img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+}
+
+.logo-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999; /* Para asegurarse de que esté en la parte superior */
+}
+
+.logo-img {
+    width: 20%; /* Ajusta el tamaño según lo necesario */
+    height: 20%;
+}

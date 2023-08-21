@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Futura';
+    src: local('Futura Bold'), local('Futura-Bold'),
+        url('FuturaLT-Bold.woff2') format('woff2'),
+        url('FuturaLT-Bold.woff') format('woff'),
+        url('FuturaLT-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Futura', sans-serif; /* Aplicamos la fuente Futura a todo el contenido */
+    background-image: url(../img/FONDO.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 10%;
+    transition: transform 0.3s ease; /* Transición para el efecto de zoom en el título */
+}
+
+.titulo h1 {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+}
+
+.titulo img {
+    width: 100px;
+    margin-left: 30px;
+}
+
+.titulo:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor sobre el título */
+}
+
+.l-side-nav {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.side-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav li {
+    position: relative;
+    padding: 10px;
+    color: white;
+    margin-bottom: 80px;
+}
+
+.side-nav li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.side-nav li span {
+    padding-left: 20px;
+    font-size: 25px;
+    white-space: nowrap;
+    transition: transform 0.3s ease; /* Efecto de acercamiento al pasar el cursor sobre el span */
+}
+
+.side-nav li:hover {
+    cursor: pointer;
+}
+
+.side-nav li:hover::before {
+    opacity: 1;
+}
+
+ul {
+    border-left: 5px solid white;
+    padding-left: 10px;
+}
+
+.mensaje {
+    color: black;
+    display: none;
+    position: absolute;
+    top: 100%; /* Reducir este valor para acercar el recuadro blanco al span */
+    left: 9%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 20px; /* Tamaño personalizado del texto */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    white-space: nowrap; /* Evitar saltos de línea */
+    overflow: hidden; /* Ocultar texto que sobrepase el ancho */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos para texto que no quepa */
+    display: inline-block; /* Ajustar al tamaño del contenido (el mensaje) */
+    height: 60px; /* Altura reducida del recuadro blanco */
+}
+
+.side-nav li:hover .mensaje {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition-delay: 0s, 0s, 0s;
+}
+
+.side-nav li span:hover {
+    transform: scale(1.1); /* Efecto de acercamiento (zoom) al pasar el cursor sobre el span */
+}
+
+
+  /* Estilos para el botón de regreso */
+  .back-button-container {
+    position: fixed;
+    bottom: -100px; /* Ajusta esta propiedad para cambiar la distancia desde abajo */
+    right: 0;
+    padding: 10px;
+    z-index: 999;
+    border-radius: 50%;
+}
+
+.back-button img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+}
+
+.logo-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999; /* Para asegurarse de que esté en la parte superior */
+}
+
+.logo-img {
+    width: 20%; /* Ajusta el tamaño según lo necesario */
+    height: 20%;
+}

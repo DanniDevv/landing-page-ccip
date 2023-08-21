@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'Futura';
+    src: local('Futura Bold'), local('Futura-Bold'),
+        url('FuturaLT-Bold.woff2') format('woff2'),
+        url('FuturaLT-Bold.woff') format('woff'),
+        url('FuturaLT-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Futura', sans-serif;
+    background-image: url(../img/FONDO.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+
+.titulo h1 {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+}
+
+.titulo img {
+    width: 100px;
+    margin-left: 30px;
+}
+
+.titulo:hover {
+    transform: scale(1.1);
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    color: white;
+    /*color de todo el conteiner*/
+}
+
+.left,
+.right {
+    width: 35%; /* Aumentamos el ancho para ambos lados */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.left {
+    margin-right: 20px; /* Aumentamos el margen derecho */
+    margin-left: 10%; /* Reducimos el margen izquierdo */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left .content {
+    margin-bottom: 20px;
+    /* Agregamos espacio entre los contenidos */
+    display: flex;
+    /* Utilizamos flexbox para alinear el texto y la imagen horizontalmente */
+    flex-direction: row;
+    /* Alineamos los elementos en fila */
+    align-items: center;
+    /* Centramos los elementos verticalmente */
+    transition: transform 0.3s ease;
+    /* Añadimos la transición para la animación */
+}
+
+.left .content:hover {
+    transform: scale(1.1);
+    /* Escalamos el contenido al pasar el cursor por encima */
+}
+
+.left img {
+    width: 80px;
+    margin-right: 10px;
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52vh;
+}
+
+.content-2 {
+    background-color: #a7a7a79c;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(136, 136, 136, 0.24);
+    padding: 20px;
+    width: 400px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 10px;
+}
+
+.input-group {
+    display: grid;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.redes {
+    justify-content: center;
+    display: flex;
+}
+
+.icono {
+    margin: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.icono img {
+    width: 45%;
+}
+
+/*estilos de los iconos*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* Agregamos estilos para el contenedor principal "main" */
+.main {
+    display: flex;
+    justify-content: space-evenly; /* Distribuimos los elementos horizontalmente */
+    align-items: center; /* Centramos los elementos verticalmente */
+}
+
+/* Ajustamos los estilos para los íconos */
+.icon {
+    width: 50px; /* Reducimos el ancho del icono a 50px */
+    height: 50px; /* Reducimos la altura del icono a 50px */
+    border-radius: 100px;
+    background: #fff;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px; /* Reducimos el tamaño del texto a 20px */
+    line-height: 50px; /* Ajustamos el line-height para centrar el texto verticalmente */
+    font-family: sans-serif;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+    transition: all .3s ease-out;
+}
+
+/* Ajustamos los estilos para el texto debajo de los íconos */
+.icon span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Agregamos estilos para los íconos en estado de hover */
+.icon:hover {
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.icon:hover i {
+    color: #fff;
+}
+
+/* Estilos para cada ícono específico */
+.icon .fa-facebook-f {
+    color: #1A6ED8;
+}
+.fb:hover {
+    background: #1A6ED8;
+}
+.icon .fa-instagram {
+    color: red;
+}
+.in:hover {
+    background-image: linear-gradient(to right, #833AB4, #E1306C, #F77737, #FCAF45, #405DE6);
+}
+.icon .fa-linkedin {
+    color: rgb(0, 81, 255);
+}
+.ti:hover {
+    background: rgb(0, 81, 255);
+}
+a {
+    text-decoration: none;
+}
+
+  /* Estilos para el botón de regreso */
+  .back-button-container {
+    position: fixed;
+    bottom: -100px; /* Ajusta esta propiedad para cambiar la distancia desde abajo */
+    right: 0;
+    padding: 10px;
+    z-index: 999;
+    border-radius: 50%;
+}
+
+.back-button img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+}
+
+.logo-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999; /* Para asegurarse de que esté en la parte superior */
+}
+
+.logo-img {
+    width: 20%; /* Ajusta el tamaño según lo necesario */
+    height: 20%;
+}
